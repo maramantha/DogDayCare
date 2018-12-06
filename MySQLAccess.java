@@ -13,6 +13,7 @@ public class MySQLAccess {
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
+    private String SQLVar1 = "Webcame";
 
     public void readDataBase() throws Exception {
         try {
@@ -30,14 +31,7 @@ public class MySQLAccess {
                             "FROM OakesDB.Daycare DC INNER JOIN OakesDB.City C ON DC.LocationID = C.LocationID INNER JOIN\n" +
                             "OakesDB.DaycareToAmmenity DA ON DC.DaycareID = DA.DaycareID INNER JOIN\n" +
                             "OakesDB.AmmenitiesProvided AP ON DA.AmmenityID = AP.idAmmenityID\n" +
-                            "WHERE AP.AmmenityDesc = \"Webcam\";\n" +
-                            "\n" +
-                            "# DaycareName, CityName\n" +
-                            "'Dog City West', 'Bellevue'\n" +
-                            "'DogTopia', 'San Francisco'\n" +
-                            "'Rain City Day Care', 'Seattle'\n" +
-                            "'Tails of the City', 'Seattle'\n" +
-                            "'WoofPlayAndStay', 'Olympia'\n");
+                            "WHERE AP.AmmenityDesc = \'" + SQLVar1 + "\';\n";
             writeResultSet(resultSet);
 
         } catch (Exception e) {
