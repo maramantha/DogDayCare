@@ -1,1 +1,1 @@
-
+Select dc.DaycareName, c.CityName, s.StateAbbr FROM OakesDB.Daycare dc INNER JOIN OakesDB.City c ON dc.LocationID = c.LocationID INNER JOIN OakesDB.State s on dc.StateID = s.idState WHERE c.CityName = 'Seattle';
