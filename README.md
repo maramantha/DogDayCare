@@ -1,10 +1,10 @@
 # DogDayCare
 
-/////////////////////////////////////////////////////////////
-//      A Console Application that runs queries for        //
-//      Dog day cares.                                     //
-//                                                         //
-/////////////////////////////////////////////////////////////
+
+      A Console Application that runs queries for        
+      Dog day cares.                                     
+                                                         
+
 
 
 ## The Queries we chose:
